@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио | Резюме</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #2B2F36;
+      background: #F6F8FB;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #D90560;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+
+    .hero {
+      background: #ffffff;
+      border: 1px solid #E4EAF3;
+      border-radius: 28px;
+      padding: 48px;
+      margin-bottom: 24px;
+    }
+
+    .label {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #E7F1FD;
+      color: #525A72;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: 44px;
+      line-height: 1.15;
+      color: #2B2F36;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: 28px;
+      color: #2B2F36;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .hero-text {
+      max-width: 760px;
+      font-size: 18px;
+      color: #525A72;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: #D90560;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .button.secondary {
+      background: #ffffff;
+      color: #D90560;
+      border: 1px solid #D90560;
+    }
+
+    .section {
+      background: #ffffff;
+      border: 1px solid #E4EAF3;
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid #E4EAF3;
+      border-radius: 18px;
+      padding: 20px;
+      background: #FBFCFE;
+    }
+
+    .card p {
+      color: #525A72;
+      font-size: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #E7F1FD;
+      color: #2B2F36;
+      font-size: 14px;
+    }
+
+    .timeline-item {
+      padding-left: 18px;
+      border-left: 3px solid #D90560;
+      margin-bottom: 22px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .muted {
+      color: #768197;
+      font-size: 14px;
+    }
+
+    .footer {
+      text-align: center;
+      color: #768197;
+      font-size: 14px;
+      padding-top: 12px;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        padding: 32px 24px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <section class="hero">
+      <div class="label">Сайт-портфолио</div>
+      <h1>Имя Фамилия</h1>
+      <p class="hero-text">
+        Специалист в области обучения, методологии и образовательных проектов.
+        Разрабатываю учебные программы, курсы, практические задания и материалы
+        для корпоративного обучения.
+      </p>
+
+      <div class="buttons">
+        <a class="button" href="#projects">Смотреть проекты</a>
+        <a class="button secondary" href="#contacts">Контакты</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Обо мне</h2>
+      <p>
+        Здесь будет краткое описание профессионального опыта: чем занимаюсь,
+        какие задачи решаю, с какими продуктами, курсами и командами работала.
+      </p>
+      <p>
+        Этот блок можно использовать как короткую самопрезентацию для работодателя:
+        без лишней биографии, но с акцентом на пользу, опыт и сильные стороны.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Ключевые навыки</h2>
+      <div class="tags">
+        <span class="tag">Разработка курсов</span>
+        <span class="tag">Методология обучения</span>
+        <span class="tag">Moodle</span>
+        <span class="tag">Информационная безопасность</span>
+        <span class="tag">SQL</span>
+        <span class="tag">HTML / CSS</span>
+        <span class="tag">Документация</span>
+        <span class="tag">Презентации</span>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Сильные проекты</h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Корпоративный курс</h3>
+          <p>
+            Разработка структуры, теории, практических заданий и материалов
+            для обучения сотрудников или внешних слушателей.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Практический тренажёр</h3>
+          <p>
+            Создание учебного сценария, в котором слушатель выполняет действия
+            в приближенной к рабочей среде логике.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Образовательное мероприятие</h3>
+          <p>
+            Подготовка концепции, программы, заданий, коммуникаций и материалов
+            для хакатона, интенсива или мастер-класса.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Опыт</h2>
+
+      <div class="timeline-item">
+        <h3>Должность / направление</h3>
+        <p class="muted">Компания · период работы</p>
+        <p>
+          Здесь можно описать основные обязанности: разработка программ обучения,
+          сопровождение курсов, взаимодействие с экспертами, подготовка учебных
+          материалов и организация образовательных проектов.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Предыдущий опыт</h3>
+        <p class="muted">Компания · период работы</p>
+        <p>
+          Здесь можно добавить второй блок опыта или убрать его, если пока нужна
+          короткая версия сайта.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <h2>Контакты</h2>
+      <p>
+        Email: <a href="mailto:example@mail.com">example@mail.com</a>
+      </p>
+      <p>
+        GitHub: <a href="https://github.com/Arzunchik196" target="_blank">github.com/Arzunchik196</a>
+      </p>
+      <p>
+        Telegram / HH / LinkedIn: сюда можно добавить нужные ссылки.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 · Сайт-портфолио</p>
+    </footer>
+
+  </main>
+</body>
+</html>
