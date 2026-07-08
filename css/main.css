@@ -774,3 +774,126 @@ h4 {
     flex-direction: column;
   }
 }
+/* VISUAL UPGRADE */
+
+body {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(0, 169, 157, 0.22), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(0, 169, 157, 0.14), transparent 30%),
+    radial-gradient(circle at 50% 100%, rgba(0, 169, 157, 0.10), transparent 34%),
+    linear-gradient(180deg, #FFFFFF 0%, #F2FFFD 44%, #FFFFFF 100%);
+}
+
+.site-header {
+  box-shadow: 0 8px 28px rgba(0, 169, 157, 0.08);
+}
+
+.nav__link.is-active {
+  background: var(--accent-soft);
+  color: var(--black);
+  box-shadow: inset 0 0 0 1px rgba(0, 169, 157, 0.22);
+}
+
+.nav__link:hover {
+  background: #CFF4EF;
+}
+
+.home-summary-card,
+.skills-panel,
+.contact-box,
+.info-card,
+.card,
+.section-note {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(244, 255, 253, 0.95) 100%);
+  border-color: rgba(0, 169, 157, 0.24);
+}
+
+.home-photo-card,
+.image-card {
+  border-color: rgba(0, 169, 157, 0.28);
+}
+
+.eyebrow,
+.section__kicker,
+.contact-layout__label {
+  background: #CFF4EF;
+  color: #005F58;
+  box-shadow: 0 8px 20px rgba(0, 169, 157, 0.12);
+}
+
+.info-card h3,
+.card h3,
+.soft-card h3,
+.experience-item h2,
+.contact-box h2 {
+  color: #005F58;
+}
+
+.experience-item,
+.soft-card {
+  border-color: rgba(0, 169, 157, 0.24);
+  border-left-color: var(--accent);
+  background:
+    linear-gradient(135deg, #FFFFFF 0%, #F4FFFD 100%);
+}
+
+.tag {
+  background: #F4FFFD;
+  border-color: rgba(0, 169, 157, 0.28);
+  color: #063E3A;
+}
+
+.tag:hover {
+  background: #CFF4EF;
+  border-color: rgba(0, 169, 157, 0.45);
+}
+
+.button {
+  box-shadow: 0 10px 24px rgba(0, 169, 157, 0.22);
+}
+
+.contact-layout::before {
+  background: radial-gradient(circle, rgba(0, 169, 157, 0.24) 0%, rgba(0, 169, 157, 0.08) 52%, transparent 72%);
+}
+
+.contact-layout::after {
+  background: radial-gradient(circle, rgba(0, 169, 157, 0.18) 0%, rgba(0, 169, 157, 0.05) 55%, transparent 75%);
+}
+
+.contact-box {
+  cursor: pointer;
+  position: relative;
+}
+
+.contact-box::after {
+  content: "нажмите, чтобы скопировать";
+  display: block;
+  margin-top: 10px;
+  color: var(--accent-dark);
+  font-size: 11px;
+  font-weight: 800;
+  opacity: 0.72;
+}
+
+.contact-box.is-copied::after {
+  content: "скопировано";
+  color: #005F58;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 680px) {
+  .reveal {
+    transform: none;
+  }
+}
